@@ -6,12 +6,13 @@
   "scripts": {
     "dev": "vite",
     "tsc": "vue-tsc",
-    "build": "vite build && yarn cp",
+    "build": "vite build ",
     "cp": "cp ./my-plugin/my-plugin.umd.js /Users/xlx/libjs",
     "preview": "vite preview"
   },
   "dependencies": {
     "element-plus": "^2.7.4",
+    "js-yaml": "^4.1.0",
     "rimraf": "^5.0.7",
     "rollup-plugin-copy": "^3.5.0",
     "rollup-plugin-delete": "^2.0.0",
@@ -22,6 +23,7 @@
     "vue": "^3.4.21"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@vitejs/plugin-vue": "^5.0.4",
     "typescript": "^5.2.2",
     "vite": "4.5",

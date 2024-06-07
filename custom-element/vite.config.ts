@@ -1,3 +1,5 @@
+import fs from 'fs';
+import yaml from 'js-yaml';
 import path from 'path';
 import copy from 'rollup-plugin-copy';
 import { defineConfig } from 'vite';
@@ -8,7 +10,8 @@ import { viteExternalsPlugin } from 'vite-plugin-externals';
 
 import vue from '@vitejs/plugin-vue';
 
-import info from './info.json';
+const fileContents = fs.readFileSync('./info.yaml', 'utf8');
+const info = yaml.load(fileContents) as any;
 
 export default defineConfig({
   plugins: [
@@ -53,7 +56,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, 'src/main-lib.ts'),
       name: `${info.name}`,
-      fileName: (format: string) => `${info.name}.${format}.js`,
+      fileName: (format: string) => `${info.name}-${info.version}.${format}.js`,
       formats: ['umd']
     }
     ,rollupOptions: {
