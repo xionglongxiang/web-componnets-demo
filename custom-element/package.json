@@ -1,0 +1,32 @@
+{
+  "name": "web-components",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "tsc": "vue-tsc",
+    "build": "vite build && yarn cp",
+    "cp": "cp ./my-plugin/my-plugin.umd.js /Users/xlx/libjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "element-plus": "^2.7.4",
+    "rimraf": "^5.0.7",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-delete": "^2.0.0",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-copy": "^0.1.6",
+    "vite-plugin-css-injected-by-js": "^3.5.1",
+    "vite-plugin-externals": "^0.6.2",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "typescript": "^5.2.2",
+    "vite": "4.5",
+    "vite-plugin-clean": "^1.0.0",
+    "vite-plugin-clean-pattern": "^1.0.4",
+    "vue-tsc": "^2.0.6"
+  }
+}

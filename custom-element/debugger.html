@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Plugin Debugger</title>
+  
+  <script src="http://localhost:9527/vue.js"></script>
+  <link rel="stylesheet" href="http://localhost:9527/element-plus.css" />
+  <script src="http://localhost:9527/element-plus.js"></script>
+  <script src="./my-plugin/my-plugin.umd.js"></script>
+</head>
+<body>
+  <custom-plugin></custom-plugin>
+  <button id="updateDataButton">Update Data</button>
+  <div id="test-div"></div>
+  <script >
+    let updateDataButton = () => {
+      window.Plugins.CustomPlugin.eventCenter.emit('test', 1,2,4)
+    }
+    document.getElementById('updateDataButton').addEventListener('click', updateDataButton)
+  </script>
+</body>
+<style>
+  #test-div {
+    height: 100px;
+    width: 100px;
+  }
+  div {
+    background: pink;
+  }
+</style>
+</html>
