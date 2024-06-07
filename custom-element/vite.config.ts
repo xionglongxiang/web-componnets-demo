@@ -31,7 +31,7 @@ export default defineConfig({
     ViteCompression(),
     cleanPlugin(
       {
-        targetFiles: [{ dirPath: `${info.name}}`}]
+        targetFiles: [{ dirPath: `${info.name}`}]
       }
     ),
     copy({
