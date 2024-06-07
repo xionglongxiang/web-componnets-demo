@@ -12,3 +12,6 @@ index.html文件中加了一系列的 script 和 css。
 
 custom-element 的打包体积 2k左右。
 其他文件全部通过 外部引入，可以共用依赖文件。
+
+
+v1分之是另一个版本。
